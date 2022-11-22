@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Models/Default Cube.glb" type="PackedScene" id=1]
 [ext_resource path="res://default_env.tres" type="Environment" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Materials/Concrete039_1K-PNG/Concrete039.tres" type="Material" id=4]
 [ext_resource path="res://Models/Gun_AutoRifle.glb" type="PackedScene" id=5]
 [ext_resource path="res://Materials/Ground050_1K-PNG/Ground050.tres" type="Material" id=6]
+[ext_resource path="res://Models/Gun_PlateRail.glb" type="PackedScene" id=7]
 
 [node name="Spatial" type="Spatial"]
 
@@ -24,7 +25,7 @@ light_data = ExtResource( 3 )
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.96082, 0 )
 extents = Vector3( 30, 8, 30 )
-origin_offset = Vector3( 0, -3.703, 0 )
+origin_offset = Vector3( 0, -2.696, 0 )
 box_projection = true
 enable_shadows = true
 cull_mask = 1048573
@@ -35,24 +36,28 @@ cull_mask = 1048573
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 9.5, -0.5, 9.5 )
 
 [node name="Cube" parent="Ground/Ground" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Ground2" parent="Ground" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 9.5, -0.49, -9.5 )
 
 [node name="Cube" parent="Ground/Ground2" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Ground3" parent="Ground" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, -9.5, -0.48, -9.5 )
 
 [node name="Cube" parent="Ground/Ground3" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Ground4" parent="Ground" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, -9.5, -0.47, 9.5 )
 
 [node name="Cube" parent="Ground/Ground4" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Roof" type="Spatial" parent="."]
@@ -61,86 +66,100 @@ material/0 = ExtResource( 6 )
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 13, 10, 0 )
 
 [node name="Cube" parent="Roof/Roof" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Roof2" parent="Roof" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, -13, 9.99, 0 )
 
 [node name="Cube" parent="Roof/Roof2" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Roof3" parent="Roof" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 9.98, 13 )
 
 [node name="Cube" parent="Roof/Roof3" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Roof4" parent="Roof" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 9.97, -13 )
 
 [node name="Cube" parent="Roof/Roof4" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Roof5" parent="Roof" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 19, 9.96, -19 )
 
 [node name="Cube" parent="Roof/Roof5" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Roof6" parent="Roof" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 19, 9.95, 19 )
 
 [node name="Cube" parent="Roof/Roof6" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Roof7" parent="Roof" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 19, 9.94, 19 )
 
 [node name="Cube" parent="Roof/Roof7" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Roof8" parent="Roof" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, -19, 9.93, 19 )
 
 [node name="Cube" parent="Roof/Roof8" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Roof9" parent="Roof" instance=ExtResource( 1 )]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, -19, 9.92, -19 )
 
 [node name="Cube" parent="Roof/Roof9" index="0"]
+lightmap_scale = 3
 material/0 = ExtResource( 6 )
 
 [node name="Dynamic Objects" type="Spatial" parent="."]
 
 [node name="Gun_AutoRifle" parent="Dynamic Objects" instance=ExtResource( 5 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5.1351, 0, -6.29561 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5.40293, 0, -6.53065 )
 
 [node name="Gun" parent="Dynamic Objects/Gun_AutoRifle" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Charging Handle" parent="Dynamic Objects/Gun_AutoRifle/Gun" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Clip" parent="Dynamic Objects/Gun_AutoRifle/Gun" index="1"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Plate" parent="Dynamic Objects/Gun_AutoRifle" index="1"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Clip Door" parent="Dynamic Objects/Gun_AutoRifle/Plate" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Gun_AutoRifle2" parent="Dynamic Objects" instance=ExtResource( 5 )]
@@ -149,171 +168,242 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5.29126, 0, 4.94458 )
 [node name="Gun" parent="Dynamic Objects/Gun_AutoRifle2" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Charging Handle" parent="Dynamic Objects/Gun_AutoRifle2/Gun" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Clip" parent="Dynamic Objects/Gun_AutoRifle2/Gun" index="1"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Plate" parent="Dynamic Objects/Gun_AutoRifle2" index="1"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Clip Door" parent="Dynamic Objects/Gun_AutoRifle2/Plate" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Gun_AutoRifle3" parent="Dynamic Objects" instance=ExtResource( 5 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5.29126, 0, 16.5318 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 8.18858, 0, 16.7639 )
 
 [node name="Gun" parent="Dynamic Objects/Gun_AutoRifle3" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Charging Handle" parent="Dynamic Objects/Gun_AutoRifle3/Gun" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Clip" parent="Dynamic Objects/Gun_AutoRifle3/Gun" index="1"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Plate" parent="Dynamic Objects/Gun_AutoRifle3" index="1"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Clip Door" parent="Dynamic Objects/Gun_AutoRifle3/Plate" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Gun_AutoRifle4" parent="Dynamic Objects" instance=ExtResource( 5 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -14.8239, 0, -2.52006 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -15.0445, 0, -1.57692 )
 
 [node name="Gun" parent="Dynamic Objects/Gun_AutoRifle4" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Charging Handle" parent="Dynamic Objects/Gun_AutoRifle4/Gun" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Clip" parent="Dynamic Objects/Gun_AutoRifle4/Gun" index="1"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Plate" parent="Dynamic Objects/Gun_AutoRifle4" index="1"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Clip Door" parent="Dynamic Objects/Gun_AutoRifle4/Plate" index="0"]
 layers = 3
 use_in_baked_light = false
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
+
+[node name="Gun_PlateRail" parent="Dynamic Objects" instance=ExtResource( 7 )]
+transform = Transform( -1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -0.251696, 0.470126, 15.9201 )
+
+[node name="Plate Rail Chunk" parent="Dynamic Objects/Gun_PlateRail" index="0"]
+layers = 3
+use_in_baked_light = false
+lightmap_scale = 3
+material/0 = ExtResource( 6 )
+material/1 = ExtResource( 6 )
+
+[node name="Gun_PlateRail2" parent="Dynamic Objects" instance=ExtResource( 7 )]
+transform = Transform( -1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -5.62164, 0.470126, 4.72098 )
+
+[node name="Plate Rail Chunk" parent="Dynamic Objects/Gun_PlateRail2" index="0"]
+layers = 3
+use_in_baked_light = false
+lightmap_scale = 3
+material/0 = ExtResource( 6 )
+material/1 = ExtResource( 6 )
 
 [node name="Static Objects" type="Spatial" parent="."]
 
 [node name="Gun_AutoRifle" parent="Static Objects" instance=ExtResource( 5 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 8.18114, 0, -6.07857 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 8.18114, 0, -6.34726 )
 
 [node name="Gun" parent="Static Objects/Gun_AutoRifle" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Charging Handle" parent="Static Objects/Gun_AutoRifle/Gun" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Clip" parent="Static Objects/Gun_AutoRifle/Gun" index="1"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Plate" parent="Static Objects/Gun_AutoRifle" index="1"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Clip Door" parent="Static Objects/Gun_AutoRifle/Plate" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Gun_AutoRifle2" parent="Static Objects" instance=ExtResource( 5 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9.92394, 0, 5.38561 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9.98602, 0, 5.06073 )
 
 [node name="Gun" parent="Static Objects/Gun_AutoRifle2" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Charging Handle" parent="Static Objects/Gun_AutoRifle2/Gun" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Clip" parent="Static Objects/Gun_AutoRifle2/Gun" index="1"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Plate" parent="Static Objects/Gun_AutoRifle2" index="1"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Clip Door" parent="Static Objects/Gun_AutoRifle2/Plate" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Gun_AutoRifle3" parent="Static Objects" instance=ExtResource( 5 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9.92394, 0, 16.6513 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 12.548, 0, 16.8165 )
 
 [node name="Gun" parent="Static Objects/Gun_AutoRifle3" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Charging Handle" parent="Static Objects/Gun_AutoRifle3/Gun" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Clip" parent="Static Objects/Gun_AutoRifle3/Gun" index="1"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Plate" parent="Static Objects/Gun_AutoRifle3" index="1"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Clip Door" parent="Static Objects/Gun_AutoRifle3/Plate" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Gun_AutoRifle4" parent="Static Objects" instance=ExtResource( 5 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -14.9726, 0, -10.8143 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -15.0356, 0, -10.8143 )
 
 [node name="Gun" parent="Static Objects/Gun_AutoRifle4" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Charging Handle" parent="Static Objects/Gun_AutoRifle4/Gun" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Clip" parent="Static Objects/Gun_AutoRifle4/Gun" index="1"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 
 [node name="Plate" parent="Static Objects/Gun_AutoRifle4" index="1"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 4 )
 
 [node name="Clip Door" parent="Static Objects/Gun_AutoRifle4/Plate" index="0"]
+lightmap_scale = 2
 material/0 = ExtResource( 4 )
+
+[node name="Gun_PlateRail" parent="Static Objects" instance=ExtResource( 7 )]
+transform = Transform( -1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 3.79625, 0.47, 15.9596 )
+
+[node name="Plate Rail Chunk" parent="Static Objects/Gun_PlateRail" index="0"]
+lightmap_scale = 3
+material/0 = ExtResource( 6 )
+material/1 = ExtResource( 6 )
+
+[node name="Gun_PlateRail2" parent="Static Objects" instance=ExtResource( 7 )]
+transform = Transform( -1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -0.114956, 0.47, 4.85297 )
+
+[node name="Plate Rail Chunk" parent="Static Objects/Gun_PlateRail2" index="0"]
+lightmap_scale = 3
+material/0 = ExtResource( 6 )
+material/1 = ExtResource( 6 )
 
 [editable path="Ground/Ground"]
 [editable path="Ground/Ground2"]
@@ -332,7 +422,11 @@ material/0 = ExtResource( 4 )
 [editable path="Dynamic Objects/Gun_AutoRifle2"]
 [editable path="Dynamic Objects/Gun_AutoRifle3"]
 [editable path="Dynamic Objects/Gun_AutoRifle4"]
+[editable path="Dynamic Objects/Gun_PlateRail"]
+[editable path="Dynamic Objects/Gun_PlateRail2"]
 [editable path="Static Objects/Gun_AutoRifle"]
 [editable path="Static Objects/Gun_AutoRifle2"]
 [editable path="Static Objects/Gun_AutoRifle3"]
 [editable path="Static Objects/Gun_AutoRifle4"]
+[editable path="Static Objects/Gun_PlateRail"]
+[editable path="Static Objects/Gun_PlateRail2"]
