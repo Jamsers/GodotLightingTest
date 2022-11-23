@@ -406,6 +406,19 @@ lightmap_scale = 3
 material/0 = ExtResource( 6 )
 material/1 = ExtResource( 6 )
 
+[node name="LightingCamera" type="Camera" parent="."]
+transform = Transform( 0.733495, 0.295777, -0.611965, 0, 0.900352, 0.435162, 0.679695, -0.319189, 0.660403, -5.07836, 6.96618, 21.2909 )
+fov = 52.0
+
+[node name="LightingCamera2" type="Camera" parent="."]
+transform = Transform( 0.0770653, 0.604125, -0.793154, 0, 0.79552, 0.605927, 0.997026, -0.046696, 0.061307, -21.9488, 5.68731, -6.24584 )
+
+[node name="ReflectionCamera" type="Camera" parent="."]
+transform = Transform( -0.94755, -0.145326, 0.284657, -2.98023e-08, 0.890645, 0.4547, -0.319608, 0.430851, -0.84393, -6.87813, 1.20904, -15.0404 )
+
+[node name="ReflectionCamera2" type="Camera" parent="."]
+transform = Transform( -0.468327, -0.442389, 0.764828, 0, 0.865626, 0.500692, -0.883555, 0.234487, -0.405396, 16.1096, 2.03262, 8.60518 )
+
 [editable path="Ground/Ground"]
 [editable path="Ground/Ground2"]
 [editable path="Ground/Ground3"]
