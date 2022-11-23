@@ -9,6 +9,7 @@ sun_longitude = -135.0
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
+background_energy = 2.0
 tonemap_mode = 4
 tonemap_exposure = 1.4
 ssao_radius2 = 0.25
@@ -20,5 +21,5 @@ glow_levels/4 = true
 glow_levels/6 = true
 glow_levels/7 = true
 glow_blend_mode = 1
-glow_hdr_threshold = 1.2
+glow_hdr_threshold = 2.5
 glow_bicubic_upscale = true

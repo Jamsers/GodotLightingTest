@@ -20,6 +20,7 @@ environment = ExtResource( 2 )
 [node name="BakedLightmap" type="BakedLightmap" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.703, 0 )
 extents = Vector3( 30, 8, 30 )
+environment_mode = 1
 light_data = ExtResource( 3 )
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
